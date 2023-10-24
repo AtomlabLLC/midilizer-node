@@ -5,18 +5,20 @@ SQLizer bridge for midi to sqlizer communications
 ## Mac
 
 **Launch*sqlizer**
-
+`
 % ./sqlizer-daemon - | play -t raw -b 16 -e signed -c 1 --endian big -r 44100 -v 0.2 -
+`
 
 **Start*bridge**
-
 Update your midi input device first.
 
+`
 % npm install
 % node app.js
+`
 
 **How*to*find*your*midi*input**
-
+`
 % node
 
 Welcome to Node.js v20.8.0.
@@ -30,5 +32,6 @@ console.log(inputs)
   'IAC Driver Bus 1',
   'Studio 1824'
 ]
+`
 
 Copy the device name into app.js
