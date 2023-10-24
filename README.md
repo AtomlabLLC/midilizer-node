@@ -2,14 +2,16 @@
 
 SQLizer bridge for midi to sqlizer communications
 
-## Mac
+## Mac / Linux
 
-**Launch*sqlizer**
+### Launch sqlizer
+
 `
 % ./sqlizer-daemon - | play -t raw -b 16 -e signed -c 1 --endian big -r 44100 -v 0.2 -
 `
 
-**Start*bridge**
+### Start bridge
+
 Update your midi input device first.
 
 `
@@ -17,20 +19,31 @@ Update your midi input device first.
 % node app.js
 `
 
-**How*to*find*your*midi*input**
+### How to find your midi input
+
 `
 % node
 
 Welcome to Node.js v20.8.0.
+
 Type ".help" for more information.
+
 var easymidi = require('easymidi');
+
 var inputs = easymidi.getInputs();
-console.log(inputs)
+
+console.log(inputs);
+
 [
+
   'Ableton Push 2 Live Port',
+
   'Ableton Push 2 User Port',
+
   'IAC Driver Bus 1',
+
   'Studio 1824'
+  
 ]
 `
 
